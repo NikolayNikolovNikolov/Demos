@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" > <!-- Only once -->
+	<test name="ChromeTest">
+		<classes>
+			<class name="SA.Runner.LGN_Runner"/>
+			<class name="SA.Runner.REG_Runner"/>
+		</classes>
+	</test>
+
+<!--	<test name="FirefoxTest" >-->
+<!--	<classes>-->
+<!--		<class name="SA.Runner.LGN_Runner"/>-->
+<!--		<class name="SA.Runner.REG_Runner"/>-->
+<!--	</classes>-->
+<!--	</test>-->
+<!--	<listeners>-->
+<!--		<listener class-name="com.webdriver.webelementfunction.SuiteMethods"/>-->
+<!--	</listeners>-->
+<!--	<test name="ChromeTest" > &lt;!&ndash; Single / Multiple &ndash;&gt;-->
+<!--		<classes> &lt;!&ndash; Single/ Multiple &ndash;&gt;-->
+<!--			<class name=" " />-->
+<!--			<class name=" " />-->
+<!--		</classes>-->
+<!--	</test>-->
+<!--	<test name="FirefoxTest" > &lt;!&ndash; Single / Multiple &ndash;&gt;-->
+<!--		<classes> &lt;!&ndash; Single/ Multiple &ndash;&gt;-->
+<!--			<class name=" " />-->
+<!--			<class name=" " />-->
+<!--		</classes>-->
+<!--	</test> &lt;!&ndash; Test &ndash;&gt;-->
+	<!-- <test name=""> <classes> <class name=""></class> </classes> </test> -->
+</suite> <!-- Suite -->

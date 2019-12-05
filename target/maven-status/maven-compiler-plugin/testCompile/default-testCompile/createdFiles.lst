@@ -1,0 +1,5 @@
+SA\Runner\LGN_Runner.class
+SA\Runner\REG_Runner.class
+SA\Muster_Runner.class
+SA\stepDefinitions\Login\LGNstepDefinitions.class
+SA\stepDefinitions\Registration\REGstepDefinitions.class

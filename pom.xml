@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.n3</groupId>
+    <artifactId>BBDwithCUC</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <junit.version>5.5.2</junit.version>
+        <testng.version>6.13.1</testng.version>
+        <testngxml.location>src/test</testngxml.location> <!-- Creating the variable -->
+    </properties>
+
+    <name>BnV_QA_AutomationCore</name>
+    <url>https://repo.maven.apache.org/maven2/</url> <!--This is a path to MVN CentralRepo for DWing deps -->
+
+    <!-- ==== Needed for MVN build ==== -->
+    <repositories>
+        <repository>
+            <id>jcenter</id>
+            <url>https://dl.bintray.com/cbeust/maven/</url>
+        </repository>
+    </repositories>
+
+
+
+
+    <dependencies>
+
+        <!-- UNIT testing FW -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>${testng.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.8.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-support</artifactId>
+            <version>3.8.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-firefox-driver</artifactId>
+            <version>3.7.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.codeborne</groupId>
+            <artifactId>phantomjsdriver</artifactId>
+            <version>1.4.4</version>
+        </dependency>
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>1.2.5</version>
+        </dependency>
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>1.2.5</version>
+        </dependency>
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-core</artifactId>
+            <version>1.2.5</version>
+        </dependency>
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>gherkin</artifactId>
+            <version>2.12.2</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-jvm</artifactId>
+            <version>1.2.5</version>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-jvm-deps</artifactId>
+            <version>1.0.5</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-picocontainer</artifactId>
+            <version>1.2.5</version>
+        </dependency>
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>1.2.5</version>
+        </dependency>
+        <!--Data Driven Testing with Excel-->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.17</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.mkolisnyk</groupId>
+            <artifactId>cucumber-reports</artifactId>
+            <version>1.3.3</version>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>com.paulhammant</groupId>
+            <artifactId>ngwebdriver</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        <!--   Reporting Logger     -->
+
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.16</version>
+        </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>ru.yandex.qatools.allure</groupId>-->
+        <!--            <artifactId>allure-testng-adaptor</artifactId>-->
+        <!--            <version>${allure.version}</version>-->
+        <!--        </dependency>-->
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.5</version>
+        </dependency>
+
+        <!-- commons-io -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>1.3.2</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.6</version>
+        </dependency>
+
+        <!-- For assertions with HMT -->
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-core</artifactId>
+            <version>1.3</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- PreRQ for running the project with maven -->
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.8.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-validator</groupId>
+            <artifactId>commons-validator</artifactId>
+            <version>1.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.0.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+
+    </dependencies>
+
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>3.0.1</version>
+                    <executions>
+                        <execution>
+                            <phase>generate-sources</phase>
+                            <goals>
+                                <goal>copy-resources</goal>
+                            </goals>
+                            <configuration>
+                                <outputDirectory>${basedir}/target/test-classes</outputDirectory>
+                                <resources>
+                                    <resource>
+                                        <directory>src/main/resources</directory>
+                                    </resource>
+                                </resources>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.22.2</version>
+                    <executions>
+                        <execution>
+                            <id>testngtest</id>
+                            <phase>test</phase>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <forkCount>2</forkCount>
+                        <reuseForks>false</reuseForks>
+                        <testFailureIgnore>true</testFailureIgnore>
+
+                            <includes>
+                                 <include>**/*Runner.java</include>
+                            </includes>
+                        <suiteXmlFiles>
+                            <suiteXmlFile> ${testngxml.location}/testng.xml</suiteXmlFile>
+                        </suiteXmlFiles>
+                    </configuration>
+                </plugin>
+
+            </plugins>
+        </pluginManagement>
+    </build>
+
+
+</project>
+
+
+
+
+
+        <!-- This will generate allure reporting without Jenkins help-->
+        <!--<properties>-->
+        <!--<aspectj.version>1.7.4</aspectj.version>-->
+
+        <!--<dependency>-->
+        <!--<groupId>org.aspectj</groupId>-->
+        <!--<artifactId>aspectjweaver</artifactId>-->
+        <!--<version>${aspectj.version}</version>-->
+        <!--</dependency>-->
+
+        <!--BUILD -->
+        <!--<plugin>-->
+        <!--<groupId>org.apache.maven.plugins</groupId>-->
+        <!--<artifactId>maven-surefire-plugin</artifactId>-->
+        <!--<version>2.19.1</version>-->
+        <!--<configuration>-->
+        <!--    <testFailureIgnore>true</testFailureIgnore>-->
+        <!--    <argLine>-->
+        <!--        -javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar-->
+        <!--    </argLine>-->
+        <!--    <properties>-->
+        <!--        <property>-->
+        <!--            <name>listener</name>-->
+        <!--            <value>ru.yandex.qatools.allure.testng.AllureTestListener</value>-->
+        <!--        </property>-->
+        <!--    </properties>-->
+        <!--    <suiteXmlFiles>-->
+        <!--        <suiteXmlFile>src/test/java/com/cucumber/framework/testng/testng.xml</suiteXmlFile>-->
+        <!--    </suiteXmlFiles>-->
+        <!--</configuration>-->
+        <!--<dependencies>-->
+        <!--    <dependency>-->
+        <!--        <groupId>org.aspectj</groupId>-->
+        <!--        <artifactId>aspectjweaver</artifactId>-->
+        <!--        <version>${aspectj.version}</version>-->
+        <!--    </dependency>-->
+        <!--</dependencies>-->
+        <!--</plugin>-->
